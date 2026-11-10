@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0d0f0c">
+<title>Zombopit</title>
+<meta name="description" content="Zombopit: la Niebla sale de un pozo. Bajá con los vecinos de Villa Zombolito, tirá pelotas que rebotan, traé recursos y levantá el pueblo.">
+<link rel="icon" href="assets/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+
+<!-- HUD de la partida -->
+<div id="hud" class="hidden">
+  <div class="hud-top">
+    <div class="hud-l">
+      <div class="bar hp"><div id="hpfill"></div><span id="hptxt">100</span></div>
+      <div class="bar xp"><div id="xpfill"></div><span id="lvl">Nv 1</span></div>
+    </div>
+    <div class="hud-c">
+      <div id="timer">00:00</div>
+      <div class="bar prog"><div id="progfill"></div><i class="mk mini"></i><i class="mk boss"></i></div>
+    </div>
+    <div class="hud-r">
+      <div class="stat"><span id="kills">0</span><small>bichos</small></div>
+      <button id="btn-pause" class="icon-btn" aria-label="Pausa">❚❚</button>
+    </div>
+  </div>
+  <div class="loot-bar">
+    <span class="lt res-oro"><img class="ri-px" data-px="oro" alt=""><b id="loot-oro">0</b></span>
+    <span class="lt res-madera"><img class="ri-px" data-px="madera" alt=""><b id="loot-madera">0</b></span>
+    <span class="lt res-ladrillo"><img class="ri-px" data-px="ladrillo" alt=""><b id="loot-ladrillo">0</b></span>
+    <span class="lt res-trigo"><img class="ri-px" data-px="trigo" alt=""><b id="loot-trigo">0</b></span>
+    <span class="lt plano"><img class="ri-px" data-px="plano" alt=""><b id="planos-n">0</b></span>
+  </div>
+  <div id="bossbar" class="hidden"><div id="bossname"></div><div class="bar"><div id="bossfill"></div></div></div>
+  <div id="banner" class="hidden"></div>
+  <div id="tip" class="tip hidden"></div>
+  <div class="hud-bottom">
+    <div id="slots" class="slots"></div>
+    <div class="hud-btns">
+      <button id="btn-fire" class="tog">AUTO</button>
+      <button id="btn-speed" class="tog">x1</button>
+      <div class="balls-count"><span id="balls-txt">0/0</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Menú principal -->
+<div id="menu" class="screen">
+  <div class="menu-box">
+    <h1 class="title">ZOMBO<span>PIT</span></h1>
+    <p class="subtitle">La Niebla sale de un pozo. Villa Zombolito baja a buscarla.</p>
+    <div class="menu-btns">
+      <button id="btn-play" class="btn big">Jugar</button>
+      <button id="btn-story" class="btn">Álbum</button>
+      <button id="btn-help" class="btn">Cómo se juega</button>
+      <button id="btn-options" class="btn">Opciones</button>
+    </div>
+    <div id="menu-res" class="menu-foot res-row"></div>
+    <div id="menu-best" class="best"></div>
+  </div>
+</div>
+
+<!-- Historia -->
+<div id="story" class="screen hidden">
+  <div class="story-box">
+    <div id="story-card" class="story-card"></div>
+    <button id="story-next" class="btn big">Seguir</button>
+  </div>
+</div>
+
+<!-- Villa Zombolito: se dibuja en el canvas; esto es la barra y el panel -->
+<div id="base" class="screen base-ui hidden">
+  <div class="base-top">
+    <button id="base-back" class="btn small">← Menú</button>
+    <h2 class="base-title">VILLA ZOMBOLITO</h2>
+    <div id="base-res" class="res-row"></div>
+  </div>
+  <div id="base-panel" class="base-panel"></div>
+  <div id="toasts" class="toasts"></div>
+</div>
+
+<!-- Álbum: historia, vecinos y bichos -->
+<div id="album" class="screen hidden">
+  <div class="panel wide">
+    <div class="panel-head"><button id="album-back" class="btn small">←</button><h2>Álbum</h2><span id="album-count" class="coin-pill"></span></div>
+    <div class="tabs"><button class="tab btn small" data-tab="vecinos">Vecinos</button><button class="tab btn small" data-tab="bichos">Bichos</button><button class="tab btn small" data-tab="historia">Historia</button></div>
+    <div id="album-body"></div>
+  </div>
+</div>
+
+<!-- Sobre de figuritas -->
+<div id="sobre" class="screen modal hidden">
+  <div class="lv-box">
+    <h2 class="lv-title">SOBRE DE FIGURITAS</h2>
+    <div id="sobre-cards" class="figus"></div>
+    <button id="sobre-ok" class="btn big">Al álbum</button>
+  </div>
+</div>
+
+<!-- Personajes -->
+<div id="chars" class="screen hidden">
+  <div class="panel wide">
+    <div class="panel-head"><button id="chars-back" class="btn small">← Pueblo</button><h2 id="chars-title">¿Quién baja al Pozo?</h2><span></span></div>
+    <div id="char-detail" class="char-detail"></div>
+    <div id="char-grid" class="char-grid"></div>
+    <div class="panel-foot"><div id="chars-extra" class="chars-extra"></div><button id="chars-go" class="btn big">Seguir</button></div>
+  </div>
+</div>
+
+<!-- Niveles del Pozo -->
+<div id="stages" class="screen hidden">
+  <div class="panel">
+    <div class="panel-head"><button id="stages-back" class="btn small">←</button><h2>¿Hasta dónde bajás?</h2><span></span></div>
+    <div id="stage-list" class="stage-list"></div>
+    <div class="panel-foot"><button id="stages-go" class="btn big">¡Al Pozo!</button></div>
+  </div>
+</div>
+
+<!-- Ayuda -->
+<div id="help" class="screen hidden">
+  <div class="panel help">
+    <h2>Cómo se juega</h2>
+    <p><b>El Pozo:</b> los bichos suben en filas. Tus pelotas salen solas (F para tiro manual), rebotan en las paredes y en los bichos, y vuelven cuando llegan al fondo. <b>Atrapalas</b> caminando abajo de ellas y las tirás antes.</p>
+    <p><b>Moverte:</b> A/D o flechas (W/S para acomodarte). Apuntás con el mouse; con E apunta solo. R cambia la velocidad. En el celu, arrastrá el dedo.</p>
+    <p><b>La barricada:</b> si un bicho llega a las bolsas, te come la vida. El Pozo es difícil: al principio vas a durar poco. Es normal.</p>
+    <p><b>Nivel y cartas:</b> juntá gemas para subir de nivel y elegir pelotas nuevas, mejorarlas u objetos.</p>
+    <p><b>Orbe de fisión:</b> lo sueltan las élites (contorno dorado) y los jefes. Sube cosas de nivel al azar; con el Taller de Fusiones también podés fusionar dos pelotas a nivel 3 o evolucionarlas con una receta.</p>
+    <p><b>Botín:</b> oro, madera, ladrillos y trigo. Y a veces <b>planos</b> de edificios. Todo lo que juntás vuelve con vos, aunque mueras.</p>
+    <p><b>Villa Zombolito:</b> con el botín construís edificios. La economía se cosecha: al volver, los vecinos salen rebotando por el pueblo y juntan lo que producen los edificios. Las viviendas traen personajes, guerra da bonus para siempre y utilidad cambia las reglas.</p>
+    <div class="panel-foot"><button id="help-back" class="btn">Volver</button></div>
+  </div>
+</div>
+
+<!-- Opciones -->
+<div id="options" class="screen hidden">
+  <div class="panel">
+    <h2>Opciones</h2>
+    <label class="opt"><input type="checkbox" id="opt-sound"> Sonidos</label>
+    <label class="opt"><input type="checkbox" id="opt-music"> Música</label>
+    <label class="opt"><input type="checkbox" id="opt-fire"> Tiro automático</label>
+    <label class="opt"><input type="checkbox" id="opt-auto"> Puntería automática (PC)</label>
+    <label class="opt"><input type="checkbox" id="opt-shake"> Temblor de pantalla</label>
+    <p class="hint credits">Personajes y bichos de <b>Zombolito</b> (sprites LPC, CC-BY-SA/GPL/OGA-BY). Efectos de Kenney y sangre de Reactorcore (CC0). Música y sonidos de Juhani Junkala (CC0). Créditos completos en CREDITS.md.</p>
+    <div class="panel-foot"><button id="opt-back" class="btn">Guardar</button></div>
+  </div>
+</div>
+
+<!-- Cartas: subir de nivel / orbe de fisión -->
+<div id="levelup" class="screen modal hidden">
+  <div class="lv-box">
+    <h2 id="lv-title" class="lv-title">¡SUBISTE DE NIVEL!</h2>
+    <div id="cards" class="cards"></div>
+    <p id="lv-note" class="hint"></p>
+    <button id="reroll" class="btn small hidden">Cambiar</button>
+  </div>
+</div>
+
+<!-- Pausa -->
+<div id="pause" class="screen modal hidden">
+  <div class="panel">
+    <h2>Pausa</h2>
+    <div id="pause-stats" class="stats"></div>
+    <div class="panel-foot"><button id="pause-resume" class="btn big">Seguir</button><button id="pause-quit" class="btn danger">Subir con lo que hay</button></div>
+  </div>
+</div>
+
+<!-- Fin -->
+<div id="end" class="screen modal hidden">
+  <div class="panel">
+    <h2 id="end-title"></h2>
+    <div id="end-stats" class="stats"></div>
+    <div class="panel-foot"><button id="end-town" class="btn big">Volver al pueblo</button><button id="end-again" class="btn">Bajar otra vez</button></div>
+  </div>
+</div>
+
+<script src="js/escena.js"></script>
+<script src="js/data.js"></script>
+<script src="js/lore.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/sprites.js"></script>
+<script src="js/pixel.js"></script>
+<script src="js/game.js"></script>
+<script src="js/base.js"></script>
+<script src="js/ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+PISOS Y OBJETOS DE LA CALLE (armados con scripts/suelos.mjs; recortados, combinados y oscurecidos)
+
+assets/tiles/{pasto,tierra,cana}_*.webp (pasto, tierra, piedra, ripio, pasto seco y matas)
+"[LPC] Terrains" — CC-BY-SA 4.0 / CC-BY-SA 3.0 — https://opengameart.org/content/lpc-terrains
+Estas baldosas derivadas quedan bajo CC-BY-SA 3.0. Créditos completos del pack:
+
+"[LPC] Terrains" by bluecarrot16, Lanea Zimmerman (Sharm), Daniel Eddeland (Daneeklu), Richard Kettering (Jetrel), Zachariah Husiar (Zabin), Hyptosis, Casper Nilsson, Buko Studios, Nushio, ZaPaper, billknye, William Thompson, caeles, Redshrike, Bertram, and Rayane Félix (RayaneFLX)
+
+Liberated Pixel Cup (LPC) Base Assets (sprites & map tiles)
+Lanea Zimmerman (Sharm)
+CC-BY 3.0 / CC-BY-SA 3.0 / GPL 3.0
+https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+
+[LPC] Farming tilesets, magic animations and UI elements
+Daniel Eddeland (Daneeklu)
+CC-BY-SA 3.0 / GPL 3.0
+https://opengameart.org/content/lpc-farming-tilesets-magic-animations-and-ui-elements
+
+ZRPG Tiles
+Richard Kettering (Jetrel), Zachariah Husiar (Zabin), Hyptosis, Lanea Zimmerman (Sharm), and Open Pixel Project.
+CC-BY-SA 3.0+
+https://opengameart.org/content/zrpg-tiles
+
+LPC C.Nilsson
+Casper Nilsson
+CC-BY-SA 3.0 / GPL 3.0
+https://opengameart.org/content/lpc-cnilsson
+
+Frozen Lake [LPC]
+Buko Studios (http://www.buko-studios.com/) Commissioned by PlayCraft: (www.playcraftapp.com)
+CC-BY 3.0
+https://opengameart.org/content/frozen-lake-lpc
+
+
+LPC Animated Water and waterfalls
+ZaPaper
+CC-BY-SA 3.0
+https://opengameart.org/content/lpc-animated-water-and-waterfalls
+
+LPC More Water Transitions
+billknye
+CC-BY-SA 3.0 / GPL 3.0
+https://opengameart.org/content/lpc-more-water-transitions
+
+[LPC] Sand+Rock Alt Colors
+William.Thompsonj, Daniel Eddeland
+CC-BY-SA 3.0 / GPL 3.0
+https://opengameart.org/content/lpc-sandrock-alt-colors
+
+[LPC] Colorful Sand + Deep Water!
+Nushio
+CC-BY-SA 3.0 / GPL 3.0
+https://opengameart.org/content/lpc-colorful-sand-deep-water
+
+LPC terrain extension
+caeles
+CC-BY-SA 3.0 / GPL 3.0
+https://opengameart.org/content/lpc-terrain-extension
+
+RPG Tiles: Cobble stone paths & town objects
+Zachariah Husiar (Zabin), Daniel Eddeland (Daneeklu), Richard Kettering (Jetrel), Hyptosis, Redshrike, Bertram
+CC-BY-SA 3.0
+https://opengameart.org/content/rpg-tiles-cobble-stone-paths-town-objects
+
+RPG Terrains
+Rayane Félix (RayaneFLX)
+CC-BY-SA 3.0
+https://opengameart.org/content/rpg-terrains
+assets/tiles/pasto_6..9, baldosa_*, metal_*.webp (vereda, asfalto, baldosas, cemento, grietas, rejillas, alcantarilla) y assets/tiles/props.webp (tachos, conos, gomas)
+"LPC Modern Streets" por Faufilage — CC0 — https://opengameart.org/node/183431
+
+assets/tiles/escena.webp (árboles, árboles secos y arbustos)
+"[LPC] Trees" — CC-BY-SA 3.0 — https://opengameart.org/content/lpc-trees
+Recortados y oscurecidos. Créditos completos del pack:
+## Trees
+
+"[LPC] Trees Mega-Pack" by bluecarrot16, Jetrel, Zabin, Hyptosis, Surt, Buch, Johann Charlot, Stephen Challener and the Open Surge team (http://opensnc.sourceforge.net), Gaurav Munjal, Ivan Voirol (Silver IV)
+Guido Bos, Yar, Paulina Riva (PauR), William.Thompsonj, Casper Nilsson, Hyptosis, ansimuz, qubodup, Bart K., Blarumyrran, Lanea Zimmerman (Sharm), Leonard Pabin, Chris Phillips, Barbara Rivera, and Talosaurus. 
+CC-BY-SA 3.0
+
+
+Lots of trees and plants from OGA (DB32) tilesets pack 1
+Jetrel, Zabin, Hyptosis, Surt
+CC0
+https://opengameart.org/content/lots-of-trees-and-plants-from-oga-db32-tilesets-pack-1
+
+The Field of the Floating Islands
+Buch <https://opengameart.org/users/buch>
+CC0
+https://opengameart.org/content/the-field-of-the-floating-islands
+
+Outdoor tiles, again
+Buch <https://opengameart.org/users/buch>
+CC-BY 2.0
+https://opengameart.org/content/outdoor-tiles-again
+
+Shoot'em up graphic kit
+Johann Charlot
+CC-BY-SA 3.0 / GPL 3.0
+https://opengameart.org/content/shootem-up-graphic-kit
+
+32x32 (and 16x16) RPG Tiles--Forest and some Interior Tiles
+Stephen Challener and the Open Surge team (http://opensnc.sourceforge.net)commissioned by Gaurav Munjal
+CC-BY 3.0
+https://opengameart.org/content/32x32-and-16x16-rpg-tiles-forest-and-some-interior-tiles
+
+Orthographic outdoor tiles
+Buch
+CC0
+https://opengameart.org/content/orthographic-outdoor-tiles
+
+Basic map 32x32 by Silver IV
+Ivan Voirol (Silver IV)
+CC-BY 3.0 / GPL 3.0 / GPL 2.0
+https://opengameart.org/content/basic-map-32x32-by-silver-iv
+
+old frogatto tile art
+Guido Bos
+CC0
+https://opengameart.org/content/old-frogatto-tile-art
+
+Generic Platformer Tiles
+surt
+CC0
+http://opengameart.org/content/generic-platformer-tiles
+
+Isometric 64x64 Outside Tileset
+Yar
+CC-BY 3.0
+https://opengameart.org/content/isometric-64x64-outside-tileset
+
+Nature tileset
+Paulina Riva (PauR)
+CC-BY 3.0
+https://opengameart.org/content/nature-tileset
+
+[LPC] Tree Recolors
+William.Thompsonj
+CC-BY-SA 3.0 / GPL 3.0
+https://opengameart.org/content/lpc-tree-recolors
+
+LPC C.Nilsson
+Casper Nilsson
+CC-BY-SA 3.0 / GPL 3.0
+https://opengameart.org/content/lpc-cnilsson
+
+Lots of Hyptosis' tiles organized!
+Hyptosis
+CC-BY 3.0
+https://opengameart.org/content/lots-of-hyptosis-tiles-organized
+
+Trees & Bushes
+ansimuz
+CC0
+http://opengameart.org/content/trees-bushes
+
+OGA Community Tileset: Nature
+qubodup, Bart K., Blarumyrran
+GPL 2.0 / GPL 3.0 / CC-BY-SA 3.0
+https://opengameart.org/content/oga-community-tileset-nature
+
+Liberated Pixel Cup (LPC) Base Assets 
+Lanea Zimmerman (Sharm)
+CC-BY-SA 3.0 / CC-BY 3.0 / GPL 3.0
+https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+
+Whispers of Avalon: Grassland Tileset
+Leonard Pabin
+CC-BY 3.0 / GPL 3.0 / GPL 2.0
+https://opengameart.org/content/whispers-of-avalon-grassland-tileset
+
+Team River Fox
+Chris Phillips, Barbara Rivera
+CC-BY-SA 3.0 / GPL 3.0
+https://opengameart.org/content/team-river-fox
+
+Concept Art for LPC Entry
+Barbara Rivera
+CC-BY-SA 3.0 / GPL 3.0
+https://opengameart.org/content/concept-art-for-lpc-entry
+
+Old Eastern Themed Building Tiles + Tree
+Talosaurus
+CC0
+https://opengameart.org/content/old-eastern-themed-building-tiles-tree
+
+
+assets/tiles/escena.webp (tumbas, cruces y lápidas)
+"LPC Grave Markers Rework" — CC-BY-SA 3.0 o posterior — https://opengameart.org/node/81422
+Por Barbara Rivera, Casper Nilsson, Carlo Enrico Victoria, Tuomo Untinen, ak-blanc, Johann C y Jordan Irwin (AntumDeluge). Recortadas y oscurecidas.
